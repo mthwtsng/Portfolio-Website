@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="test/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 <body>
     <header>
         <nav class="side-menu">
-            <button><a href="#home">Home</a></button>
-            <button id = "about-button"><a href="#about"><img id = "about-icon" src = "img/person.png">About</a></button>
-            <button><a href="#projects">Projects</a></button>
-            <button><a href="#portfolio">Portfolio</a></button>
-            <button><a href="#contact">Contact</a></button>
+            <button id = "home-button"><a href="#home"><i class="bi bi-house"></i><span class = "button-text">Home</span></a></button>
+            <button id = "about-button"><a href="#about"><i class="bi bi-person"></i><span class = "button-text">About</span></a></button>
+            <button id = "portfolio-button"><a href="#portfolio"><i class="bi bi-briefcase"></i></i><span class = "button-text">Portfolio</span></a></button>
+            <button id = "resume-button"><a href="#resume"><i class="bi bi-file-earmark"></i><span class = "button-text">Resume</span></a></button>
+            <button id = "contact-button"><a href="#contact"><i class="bi bi-envelope"></i><span class = "button-text">Contact</span></a></button>
         </nav>
     </header>
 
@@ -24,9 +25,11 @@
     <main>
 
         <section id = "home">
-            <div id = "home-content">
-                <h1 class = "home-header" id = "home-mainheader">Hi, I'm Matthew Tseng.</h1>
-                <h4 class = "home-header" id = "home-subheader" >I'm a Computer Science Student</h2>
+            <div id = "background-holder">
+                <div id = "home-content">
+                    <h1 class = "home-header" id = "home-mainheader">Hi, I'm Matthew Tseng.</h1>
+                    <h4 class = "home-header" id = "home-subheader" >I'm a Computer Science Student</h2>
+                </div>
             </div>
         </section>
 
@@ -36,9 +39,9 @@
             </div>
         </section>
 
-        <section id = "projects">
-            <div id = "projects-content">
-                <h1>Projects</h1>
+        <section id = "portfolio">
+            <div id = "portfolio-content">
+                <h1>Portfolio</h1>
             </div>
         </section>
     </main>

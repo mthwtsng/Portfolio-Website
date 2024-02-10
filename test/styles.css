@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #ecf0f1;
+    background-color: #ebe4d2;
 }
 
 header {
@@ -32,25 +32,40 @@ header {
     cursor: pointer;
     padding: 10px;
     margin-bottom: 10px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
 }
+
+.side-menu i {
+    background-color: rgb(211, 194, 138);
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+
+
 
 .side-menu a {
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
+    color: white;
     font-weight: bold;
     border: 0px solid transparent;
-    padding: 7px 20px; 
+    padding: 7px 10px; 
     display: inline-block;
-    background-color: transparent;
-    border-radius: 30px;
-    transition: background-color 0.3s;
+
 }
 
-.side-menu a:hover {
-    background-color: lightgray;
+.button-text{
+    visibility: hidden;
 }
 
+
+.side-menu button i {
+    margin-right: 10px; /* Add some spacing between the icon and text */
+}
 
 #about-icon {
     width: 20px; /* Set the desired width for the icon */
@@ -59,24 +74,35 @@ header {
 }
 
 #home {
-    background-color: #ecf0f1;
     text-align: left;
-    padding: 100px 20px;
-    height: 100vh;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10% 5%; 
+    min-height: 100vh; 
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: left; 
+    
 }
+
 
 .home-header {
     color: #333;
-    margin-bottom: 20px;
-    margin-left: 500px;
+    margin-bottom: 5%; 
+    font-size: 4vw; 
+    margin-left: 20%;
+}
+
+#home-mainheader{
+    font-size: 60px;
+}
+
+#home-subheader {
+    color: #333;
+    font-size: 1.5vw; /* Adjust font size based on percentage of viewport width */
 }
 
 #about-content{
-    background-color: #ecf0f1;
     text-align: left;
     padding: 100px 20px;
     height: 80vh;

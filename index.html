@@ -11,12 +11,15 @@
 
 <body>
     <header>
-        <nav class="side-menu">
-            <button id = "home-button"><a href="#home"><i class="bi bi-house"></i><span class = "button-text">Home</span></a></button>
-            <button id = "about-button"><a href="#about"><i class="bi bi-person"></i><span class = "button-text">About</span></a></button>
-            <button id = "portfolio-button"><a href="#portfolio"><i class="bi bi-briefcase"></i></i><span class = "button-text">Portfolio</span></a></button>
-            <button id = "resume-button"><a href="#resume"><i class="bi bi-file-earmark"></i><span class = "button-text">Resume</span></a></button>
-            <button id = "contact-button"><a href="#contact"><i class="bi bi-envelope"></i><span class = "button-text">Contact</span></a></button>
+        <nav class="nav-bar">
+            <ul class = "nav-menu">
+                <li class="menu-item"><a href="#home"><i class="bi bi-house"></i><span>Home</span></a></li>
+                <li class="menu-item"><a href="#about"><i class="bi bi-person"></i><span>About</span></a></li>
+                <li class="menu-item"><a href="#portfolio"><i class="bi bi-briefcase"></i><span>Portfolio</span></a></li>
+                <li class="menu-item"><a href="#resume"><i class="bi bi-file-earmark"></i><span>Resume</span></a></li>
+                <li class="menu-item"><a href="#contact"><i class="bi bi-envelope"></i><span>Contact</span></a></li>
+            </ul>
+            
         </nav>
     </header>
 
@@ -28,14 +31,14 @@
             <div id = "background-holder">
                 <div id = "home-content">
                     <h1 class = "home-header" id = "home-mainheader">Hi, I'm Matthew Tseng.</h1>
-                    <h4 class = "home-header" id = "home-subheader" >I'm a Computer Science Student</h2>
+                    <h4 class = "home-header" id = "home-subheader" >I'm a <span id="dynamic-text">Computer Science Student</span></h4>
                 </div>
             </div>
         </section>
 
         <section id = "about">
             <div id = "about-content">
-                <h1>About</h1>
+                <h1  id = "about-header">About</h1>
             </div>
         </section>
 

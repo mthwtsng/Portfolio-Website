@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #ebe4d2;
+    background-color: #ffffff;
 }
 
 header {
@@ -13,10 +13,14 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Ensures the header is above other elements */
+    z-index: 1000; 
 }
 
-.side-menu {
+
+/* -------------------
+    Navigation Bar
+---------------------- */
+.nav-bar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -26,28 +30,7 @@ header {
     margin-top: 30vh;
 }
 
-.side-menu button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Align items vertically */
-}
-
-.side-menu i {
-    background-color: rgb(211, 194, 138);
-    border-radius: 30px;
-    padding: 10px;
-    position: relative;
-    transition: width 0.3s ease;
-}
-
-
-
-
-.side-menu a {
+.nav-bar a {
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
@@ -55,24 +38,102 @@ header {
     border: 0px solid transparent;
     padding: 7px 10px; 
     display: inline-block;
-
+    margin-left: 5px;
 }
 
-.button-text{
-    visibility: hidden;
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar a i {
+    font-size: 16px;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    color: #45505b;
+    padding: 15px 23px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+    border-radius: 50px;
+    background: #f2f3f5;
+    height: 25px;
+    width: 10%;
+    overflow: hidden;
+    
+}
+
+.nav-menu a span,
+.nav-menu a:focus span {
+    padding: 0 5px 0 7px;
+    color: #45505b;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+    color: #fff;
+    background: #1478dd;
+}
+
+.nav-menu a:hover span,
+.nav-menu .active span,
+.nav-menu .active:focus span,
+.nav-menu li:hover>a span {
+    color: #fff;
+    visibility: visible;
+}
+
+.menu-item:nth-child(1) a:hover,
+.menu-item:nth-child(1):hover>a {
+    width: 50%;
+    color: #fff;
+}
+
+.menu-item:nth-child(2) a:hover,
+.menu-item:nth-child(2):hover>a {
+    width: 50%; 
+    color: #fff;
+}
+
+.menu-item:nth-child(3) a:hover,
+.menu-item:nth-child(3):hover>a {
+    width: 60%; 
+    color: #fff;
+}
+
+.menu-item:nth-child(4) a:hover,
+.menu-item:nth-child(4):hover>a {
+    width: 55%; 
+    color: #fff;
+}
+
+.menu-item:nth-child(5) a:hover,
+.menu-item:nth-child(5):hover>a {
+    width: 55%; 
+    color: #fff;
+}
+
+.nav-menu a:hover span,
+.nav-menu li:hover>a span {
+    display: block;
+}
+
+.nav-menu a span,
+.nav-menu a:focus span {
+    visibility: hidden; 
 }
 
 
-.side-menu button i {
-    margin-right: 10px; /* Add some spacing between the icon and text */
-}
-
-#about-icon {
-    width: 20px; /* Set the desired width for the icon */
-    height: auto;
-    margin-right: 10px; /* Add some spacing between the icon and text */
-}
-
+/* ---------------
+    Home Section
+------------------ */
 #home {
     text-align: left;
     padding: 10% 5%; 
@@ -84,7 +145,6 @@ header {
     align-items: left; 
     
 }
-
 
 .home-header {
     color: #333;
@@ -99,16 +159,37 @@ header {
 
 #home-subheader {
     color: #333;
-    font-size: 1.5vw; /* Adjust font size based on percentage of viewport width */
+    font-size: 1.5vw; 
 }
 
 #about-content{
     text-align: left;
     padding: 100px 20px;
     height: 80vh;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
 
+#dynamic-text {
+    transition: opacity 0.5s ease; /* Add CSS transition for opacity */
+}
+
+/*-------------------
+    About Section
+---------------------*/
+#about{
+    background-color: #1478dd;
+}
+
+#about-content {
+    text-align: left;
+    padding: 100px 20px;
+    height: 80vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vh; /* Adjust the margin-top value to position it near the top */
 }

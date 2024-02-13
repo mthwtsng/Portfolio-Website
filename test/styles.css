@@ -174,22 +174,33 @@ header {
 
 #dynamic-text {
     transition: opacity 0.5s ease; /* Add CSS transition for opacity */
+    color: #1478dd;
 }
 
 /*-------------------
     About Section
 ---------------------*/
-#about{
+#about {
     background-color: #1478dd;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    min-height: 100vh; /* Minimum height of the section to fill the viewport */
 }
 
 #about-content {
-    text-align: left;
-    padding: 100px 20px;
-    height: 80vh;
+    text-align: center;
+    padding: 15px; /* Adjusted padding */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 10vh; /* Adjust the margin-top value to position it near the top */
+    justify-content: flex-start; /* Align content to the top */
+    flex-grow: 1; /* Allow the container to grow to fit its content */
 }
+
+#about-header {
+    text-align: center;
+    margin-top: 0; /* Adjusted margin-top */
+    color: white; /* Set color to contrast with the background */
+    font-size: 5vh;
+}
+

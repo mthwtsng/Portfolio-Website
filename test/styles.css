@@ -41,7 +41,7 @@ header {
     margin-left: 5px;
 }
 
-.nav-menu {
+.menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -49,10 +49,11 @@ header {
 
 .nav-bar a i {
     font-size: 16px;
+    
 }
 
-.nav-menu a,
-.nav-menu a:focus {
+.menu a,
+.menu a:focus {
     display: flex;
     align-items: center;
     color: #45505b;
@@ -68,24 +69,24 @@ header {
     
 }
 
-.nav-menu a span,
-.nav-menu a:focus span {
+.menu a span,
+.menu a:focus span {
     padding: 0 5px 0 7px;
     color: #45505b;
 }
 
-.nav-menu a:hover,
-.nav-menu .active,
-.nav-menu .active:focus,
-.nav-menu li:hover>a {
+.menu a:hover,
+.menu .active,
+.menu .active:focus,
+.menu li:hover>a {
     color: #fff;
     background: #1478dd;
 }
 
-.nav-menu a:hover span,
-.nav-menu .active span,
-.nav-menu .active:focus span,
-.nav-menu li:hover>a span {
+.menu a:hover span,
+.menu .active span,
+.menu .active:focus span,
+.menu li:hover>a span {
     color: #fff;
     visibility: visible;
 }
@@ -120,13 +121,13 @@ header {
     color: #fff;
 }
 
-.nav-menu a:hover span,
-.nav-menu li:hover>a span {
+.menu a:hover span,
+.menu li:hover>a span {
     display: block;
 }
 
-.nav-menu a span,
-.nav-menu a:focus span {
+.menu a span,
+.menu a:focus span {
     visibility: hidden; 
 }
 
@@ -181,14 +182,12 @@ header {
     About Section
 ---------------------*/
 #about {
-    background-color: #1478dd;
     display: flex;
     align-items: center; /* Align items vertically */
     min-height: 100vh; /* Minimum height of the section to fill the viewport */
 }
 
 #about-content {
-    text-align: center;
     padding: 15px; /* Adjusted padding */
     box-sizing: border-box;
     display: flex;
@@ -199,8 +198,14 @@ header {
 
 #about-header {
     text-align: center;
-    margin-top: 0; /* Adjusted margin-top */
-    color: white; /* Set color to contrast with the background */
+    margin-top: -2vh; 
     font-size: 5vh;
 }
 
+#self-picture {
+    width: 40vh; /* Adjust the width as needed */
+    height: 40vh; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 40vh;
+    margin: 8% 0 0 10%;
+}

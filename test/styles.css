@@ -20,7 +20,7 @@ header {
 /* -------------------
     Navigation Bar
 ---------------------- */
-.nav-bar {
+.nav-menu {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -30,7 +30,7 @@ header {
     margin-top: 30vh;
 }
 
-.nav-bar a {
+.nav-menu a {
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
@@ -47,9 +47,8 @@ header {
     margin: 0;
 }
 
-.nav-bar a i {
+.nav-menu a i {
     font-size: 16px;
-    
 }
 
 .menu a,
@@ -57,20 +56,19 @@ header {
     display: flex;
     align-items: center;
     color: #45505b;
-    padding: 15px 23px;
+    padding: 20px 25px; /* Adjust padding */
     margin-bottom: 8px;
     transition: 0.3s;
     font-size: 15px;
     border-radius: 50px;
     background: #f2f3f5;
-    height: 25px;
-    width: 10%;
+    height: 10%;
+    width: 42%; /* Adjust width to take full width */
     overflow: hidden;
-    
 }
 
 .menu a span,
-.menu a:focus span {
+.menu a:focus span { 
     padding: 0 5px 0 7px;
     color: #45505b;
 }
@@ -91,33 +89,33 @@ header {
     visibility: visible;
 }
 
-.menu-item:nth-child(1) a:hover,
-.menu-item:nth-child(1):hover>a {
-    width: 50%;
+.nav-item:nth-child(1) a:hover,
+.nav-item:nth-child(1):hover>a {
+    width: 70%;
     color: #fff;
 }
 
-.menu-item:nth-child(2) a:hover,
-.menu-item:nth-child(2):hover>a {
-    width: 50%; 
+.nav-item:nth-child(2) a:hover,
+.nav-item:nth-child(2):hover>a {
+    width: 70%; 
     color: #fff;
 }
 
-.menu-item:nth-child(3) a:hover,
-.menu-item:nth-child(3):hover>a {
-    width: 60%; 
+.nav-item:nth-child(3) a:hover,
+.nav-item:nth-child(3):hover>a {
+    width: 90%; 
     color: #fff;
 }
 
-.menu-item:nth-child(4) a:hover,
-.menu-item:nth-child(4):hover>a {
-    width: 55%; 
+.nav-item:nth-child(4) a:hover,
+.nav-item:nth-child(4):hover>a {
+    width: 85%; 
     color: #fff;
 }
 
-.menu-item:nth-child(5) a:hover,
-.menu-item:nth-child(5):hover>a {
-    width: 55%; 
+.nav-item:nth-child(5) a:hover,
+.nav-item:nth-child(5):hover>a {
+    width: 85%; 
     color: #fff;
 }
 
@@ -130,6 +128,8 @@ header {
 .menu a:focus span {
     visibility: hidden; 
 }
+
+
 
 
 /* ---------------
@@ -163,49 +163,99 @@ header {
     font-size: 1.5vw; 
 }
 
-#about-content{
-    text-align: left;
-    padding: 100px 20px;
-    height: 80vh;
-    box-sizing: border-box; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 #dynamic-text {
     transition: opacity 0.5s ease; /* Add CSS transition for opacity */
     color: #1478dd;
 }
 
+/*------------------
+    General section
+--------------------*/
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #45505b;
+  }
+  
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  
+  .section-title p {
+    margin-bottom: 0;
+  }
+
 /*-------------------
     About Section
 ---------------------*/
-#about {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    min-height: 100vh; /* Minimum height of the section to fill the viewport */
+section#about {
+    padding: 60px 0 150px; /* Adjust the padding-bottom value to add more space */
+    overflow: hidden;
 }
 
-#about-content {
-    padding: 15px; /* Adjusted padding */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    flex-grow: 1; /* Allow the container to grow to fit its content */
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #728394;
 }
 
-#about-header {
-    text-align: center;
-    margin-top: -2vh; 
-    font-size: 5vh;
+.about .content ul {
+  padding: 0;
 }
 
-#self-picture {
-    width: 40vh; /* Adjust the width as needed */
-    height: 40vh; /* Adjust the height as needed */
-    object-fit: cover;
-    border-radius: 40vh;
-    margin: 8% 0 0 10%;
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #0563bb;
+  line-height: 0;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.vertical-center {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+section#about .container .row .col-lg-8 .content ul {
+    list-style-type: none;
 }

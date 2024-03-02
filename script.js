@@ -1,5 +1,5 @@
 // Array of dynamic texts to display
-var dynamicTexts = ["Computer Science Student", "Software Engineer", "Golfer", "Dog Lover"];
+var dynamicTexts = ["Computer Science Student", "Golfer", "Canucks Fan", "Dog Lover"];
 
 // Index to keep track of the current dynamic text
 var dynamicTextIndex = 1;
@@ -17,3 +17,8 @@ function changeDynamicTextWithFade() {
 
 // Change the dynamic part of the text with a fading effect every 3 seconds
 setInterval(changeDynamicTextWithFade, 2000);
+
+
+
+
+

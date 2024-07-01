@@ -13,7 +13,6 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; 
 }
 
 
@@ -21,12 +20,13 @@ header {
     Navigation Bar
 ---------------------- */
 .nav-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    margin-left: 10px;
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: rgba(255, 255, 255, 0.8); /* Add background color */
+    padding: 10px; /* Add padding */
+    border-radius: 10px; /* Add border radius for styling */
     margin-top: 30vh;
 }
 
@@ -144,7 +144,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: left; 
-    
 }
 
 .home-header {
@@ -164,10 +163,16 @@ header {
 }
 
 
+#github-button {
+    margin-left: 26%;
+}
+
 #dynamic-text {
     transition: opacity 0.5s ease; /* Add CSS transition for opacity */
     color: #1478dd;
 }
+
+
 
 /*------------------
     General section
@@ -204,10 +209,11 @@ section {
     left: calc(50% - 60px);
   }
   
-  
   .section-title p {
     margin-bottom: 0;
   }
+
+
 
 /*-------------------
     About Section

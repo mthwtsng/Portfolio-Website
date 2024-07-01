@@ -15,7 +15,6 @@ header {
     top: 0;
 }
 
-
 /* -------------------
     Navigation Bar
 ---------------------- */
@@ -24,7 +23,7 @@ header {
     top: 20px; /* Adjust as needed */
     left: 20px; /* Adjust as needed */
     z-index: 1000; /* Ensure it's above other content */
-    background-color: rgba(255, 255, 255, 0.8); /* Add background color */
+    background-color: rgba(255, 255, 255, 0); /* Add background color */
     padding: 10px; /* Add padding */
     border-radius: 10px; /* Add border radius for styling */
     margin-top: 30vh;
@@ -37,7 +36,8 @@ header {
     font-weight: bold;
     border: 0px solid transparent;
     padding: 7px 10px; 
-    display: inline-block;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
     margin-left: 5px;
 }
 
@@ -51,10 +51,14 @@ header {
     font-size: 16px;
 }
 
+.nav-menu .menu .nav-item a {
+    text-decoration: none;
+}
+
 .menu a,
 .menu a:focus {
     display: flex;
-    align-items: center;
+    align-items: center; /* Center items vertically */
     color: #45505b;
     padding: 20px 25px; /* Adjust padding */
     margin-bottom: 8px;
@@ -65,12 +69,14 @@ header {
     height: 10%;
     width: 42%; /* Adjust width to take full width */
     overflow: hidden;
+
 }
 
 .menu a span,
 .menu a:focus span { 
-    padding: 0 5px 0 7px;
+    padding: 2px 5px 0 7px;
     color: #45505b;
+    text-decoration: none;
 }
 
 .menu a:hover,
@@ -129,9 +135,6 @@ header {
     visibility: hidden; 
 }
 
-
-
-
 /* ---------------
     Home Section
 ------------------ */
@@ -162,9 +165,10 @@ header {
     font-size: 1.5vw; 
 }
 
-
-#github-button {
-    margin-left: 26%;
+.social-icons {
+    display: flex;
+    gap: 20px; /* Adjust the gap between icons */
+    margin-left: 20%; /* Align with the headers */
 }
 
 #dynamic-text {
@@ -172,23 +176,20 @@ header {
     color: #1478dd;
 }
 
-
-
 /*------------------
     General section
 --------------------*/
-
 section {
     padding: 60px 0;
     overflow: hidden;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     text-align: center;
     padding-bottom: 30px;
-  }
-  
-  .section-title h2 {
+}
+
+.section-title h2 {
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
@@ -196,9 +197,9 @@ section {
     padding-bottom: 20px;
     position: relative;
     color: #45505b;
-  }
-  
-  .section-title h2::before {
+}
+
+.section-title h2::before {
     content: "";
     position: absolute;
     display: block;
@@ -207,13 +208,11 @@ section {
     background: #ddd;
     bottom: 1px;
     left: calc(50% - 60px);
-  }
-  
-  .section-title p {
+}
+
+.section-title p {
     margin-bottom: 0;
-  }
-
-
+}
 
 /*-------------------
     About Section
@@ -224,44 +223,108 @@ section#about {
 }
 
 .about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #728394;
+    font-weight: 700;
+    font-size: 26px;
+    color: #728394;
 }
 
 .about .content ul {
-  padding: 0;
+    padding: 0;
 }
 
 .about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .about .content ul strong {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #0563bb;
-  line-height: 0;
+    font-size: 16px;
+    margin-right: 5px;
+    color: #0563bb;
+    line-height: 0;
 }
 
 .about .content p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .vertical-center {
-  margin: 0;
-  position: relative;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 section#about .container .row .col-lg-8 .content ul {
     list-style-type: none;
+}
+
+
+/*-------------------
+    Portfolio Section
+---------------------*/
+
+#portfolio .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .card-body {
+    text-align: center;
+}
+
+#portfolio .card-footer {
+    text-align: center;
+}
+
+#portfolio .btn {
+    margin-top: 10px;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+
+.resume-download {
+    text-align: center; /* Center content horizontally */
+    margin-bottom: 20px; /* Add space between download link and iframe */
+}
+
+.resume-preview {
+    position: relative;
+    padding-top: 40px; /* 16:9 aspect ratio for responsive iframe */
+    overflow: hidden;
+    text-align: center; /* Center iframe */
+}
+
+.resume-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    border: none; /* Remove iframe border */
+}
+
+.resume-iframe-container {
+    position: relative;
+    height: 80vb; /* Adjust height as needed */
+    width: 100%;
+    overflow: hidden;
 }

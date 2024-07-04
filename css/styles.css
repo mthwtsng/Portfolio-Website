@@ -8,6 +8,13 @@ body {
     background-color: #ffffff;
 }
 
+html, body {
+    background-color: #e7e7e7 !important; /* Slight grey background */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 header {
     padding: 20px 0;
     position: fixed;
@@ -84,7 +91,7 @@ header {
 .menu .active:focus,
 .menu li:hover>a {
     color: #fff;
-    background: #1478dd;
+    background: #646c72;
 }
 
 .menu a:hover span,
@@ -328,3 +335,4 @@ section#about .container .row .col-lg-8 .content ul {
     width: 100%;
     overflow: hidden;
 }
+

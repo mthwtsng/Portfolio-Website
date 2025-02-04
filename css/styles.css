@@ -1,30 +1,31 @@
+/* Global Styles */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     display: flex;
     flex-direction: column;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #ffffff;
+    min-height: 100vh;
 }
 
 html, body {
-    background-color: #e7e7e7 !important; /* Slight grey background */
-    margin: 0;
-    padding: 0;
     height: 100%;
 }
 
+/* Header */
 header {
-    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    z-index: 1000;
 }
 
-/* -------------------
-    Navigation Bar
----------------------- */
+/* Navigation */
 .nav-menu {
     position: fixed;
     top: 20px; /* Adjust as needed */
@@ -142,197 +143,87 @@ header {
     visibility: hidden; 
 }
 
-/* ---------------
-    Home Section
------------------- */
+
+/* Home Section */
 #home {
-    text-align: left;
-    padding: 10% 5%; 
-    min-height: 100vh; 
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left; 
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 80px 20px;
 }
 
-.home-header {
-    color: #333;
-    margin-bottom: 5%; 
-    font-size: 4vw; 
-    margin-left: 20%;
-}
-
-#home-mainheader{
-    font-size: 60px;
+#home-mainheader {
+    font-size: 50px;
+    font-weight: bold;
+    color: #222;
 }
 
 #home-subheader {
-    color: #333;
-    font-size: 1.5vw; 
+    font-size: 20px;
+    color: #555;
+    margin-top: 10px;
+}
+
+#dynamic-text {
+    color: #007bff;
+    font-weight: bold;
+    transition: opacity 0.5s ease;
 }
 
 .social-icons {
     display: flex;
-    gap: 20px; /* Adjust the gap between icons */
-    margin-left: 20%; /* Align with the headers */
+    gap: 15px;
+    margin-top: 20px;
 }
 
-#dynamic-text {
-    transition: opacity 0.5s ease; /* Add CSS transition for opacity */
-    color: #1478dd;
-}
-
-/*------------------
-    General section
---------------------*/
+/* Section Styling */
 section {
-    padding: 60px 0;
-    overflow: hidden;
+    padding: 80px 10%;
+    background: #fff;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
     text-align: center;
-    padding-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .section-title h2 {
     font-size: 32px;
     font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    color: #45505b;
+    color: #007bff;
 }
 
-.section-title h2::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 120px;
-    height: 1px;
-    background: #ddd;
-    bottom: 1px;
-    left: calc(50% - 60px);
-}
-
-.section-title p {
-    margin-bottom: 0;
-}
-
-/*-------------------
-    About Section
----------------------*/
-section#about {
-    padding: 60px 0 150px; /* Adjust the padding-bottom value to add more space */
-    overflow: hidden;
-}
-
-.about .content h3 {
-    font-weight: 700;
-    font-size: 26px;
-    color: #728394;
-}
-
-.about .content ul {
-    padding: 0;
-}
-
-.about .content ul li {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.about .content ul strong {
-    margin-right: 10px;
-}
-
-.about .content ul i {
-    font-size: 16px;
-    margin-right: 5px;
-    color: #0563bb;
-    line-height: 0;
-}
-
-.about .content p:last-child {
-    margin-bottom: 0;
-}
-
-.vertical-center {
-    margin: 0;
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-section#about .container .row .col-lg-8 .content ul {
-    list-style-type: none;
-}
-
-
-/*-------------------
-    Portfolio Section
----------------------*/
-
+/* Portfolio Section */
 #portfolio .card {
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-#portfolio .card-body {
-    text-align: center;
+#portfolio .card:hover {
+    transform: scale(1.05);
 }
 
-#portfolio .card-footer {
-    text-align: center;
-}
-
-#portfolio .btn {
-    margin-top: 10px;
-}
-
-.modal-content {
-    border-radius: 10px;
-}
-
-.modal-header {
-    border-bottom: none;
-}
-
-.modal-footer {
-    border-top: none;
-}
-
-
+/* Resume Section */
 .resume-download {
-    text-align: center; /* Center content horizontally */
-    margin-bottom: 20px; /* Add space between download link and iframe */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .resume-preview {
-    position: relative;
-    padding-top: 40px; /* 16:9 aspect ratio for responsive iframe */
-    overflow: hidden;
-    text-align: center; /* Center iframe */
+    text-align: center;
+    padding-top: 20px;
 }
 
 .resume-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adjust width as needed */
-    height: 100%; /* Adjust height as needed */
-    border: none; /* Remove iframe border */
-}
-
-.resume-iframe-container {
-    position: relative;
-    height: 80vb; /* Adjust height as needed */
     width: 100%;
-    overflow: hidden;
+    height: 80vh;
+    border: none;
 }
-

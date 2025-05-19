@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Tseng's Portfolio</title>
-    
     <!-- Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- Bootstrap CSS for modals -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,6 +24,7 @@
     </nav>
     
     <main>
+        <!-- Other sections (home, about, resume, contact) remain unchanged -->
         <section id="home">
             <div id="home-content">
                 <h1 class="home-header" id="home-mainheader">Hi, I'm Matthew Tseng.</h1>
@@ -48,27 +50,24 @@
                             <h3>Matthew Tseng</h3>
                             <p class="fst-italic">
                                 I am a third-year Computer Science student at Simon Fraser University with a strong passion for software engineering, development, and financial markets<br>
-                            </p> 
-                            <p>
                             </p>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <ul>
                                         <li><strong>Degree:</strong> <span>Bachelor's in Computer Science</span></li>
-                                        <li> <strong>City:</strong> <span>Burnaby, BC, Canada</span></li>
+                                        <li><strong>City:</strong> <span>Burnaby, BC, Canada</span></li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-6">
                                     <ul>
                                         <li><strong>Email:</strong> <span>mthwtsng@gmail.com</span></li>
                                     </ul>
-                                </div>  
+                                </div>
                             </div>
                             <p>
                                 I am a highly motivated and dedicated developer, constantly learning and working on projects to refine my skills. 
                                 My current focus is on full-stack development, particularly using Spring Boot and React, and I have experience with backend systems, trading APIs, and data analysis.  
                                 I am also exploring machine learning and data infrastructure, looking to apply my knowledge in real-world applications.  
-                    
                                 Outside of programming, I enjoy playing golf, hiking, watching the Canucks, and analyzing financial markets.  
                             </p>
                         </div>
@@ -77,148 +76,195 @@
             </div>
         </section>
 
-        <section id="portfolio">
+       <section id="portfolio">
             <div class="container" data-aos="fade-up">
-                <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
                 <div class="section-title">
                     <h2>Portfolio</h2>
                 </div>
-                
-                <div class="row">
-                    <!-- Stock Alert Bot -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Stock Alert Bot</h5>
-                                <p class="card-text">Developed a Discord bot to notify users of stock price alerts using Python, Pandas, and MongoDB.</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stockAlertModal">
-                                    Learn More
-                                </button>
-                            </div>
-                            <div class="card-footer">
-                                <a href="https://github.com/mthwtsng/Stock-Alert-Bot" class="btn btn-outline-secondary btn-sm" target="_blank">
-                                    GitHub
-                                </a>
-                            </div>
+                <div class="portfolio-list">
+                    <!-- Church Website -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="img/churchweb.png" alt="Church Website" class="img-fluid">
+                        </div>
+                        <div class="portfolio-description">
+                            <h5>Church Website - Volunteer Experience</h5>
+                            <p>Developed a responsive website for a church using HTML, CSS, and JavaScript to enhance community engagement.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#churchWebsiteModal">
+                                Learn More
+                            </button>
+                            <a href="https://github.com/mthwtsng/Church-Website" class="btn btn-outline-secondary btn-sm" target="_blank">
+                                GitHub
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Stock Forum Website -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Stock Forum Website</h5>
-                                <p class="card-text">Built a full-stack web application for stock market discussions using Java, Spring Boot, and React.js.</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stockForumModal">
-                                    Learn More
-                                </button>
-                            </div>
-                            <div class="card-footer">
-                                <a href="https://github.com/mthwtsng/Stock-Forum-Website" class="btn btn-outline-secondary btn-sm" target="_blank">
-                                    GitHub
-                                </a>
-                            </div>
+                    <!-- AI Stock Simulator -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="img/course-planner.jpg" alt="AI Stock Simulator" class="img-fluid">
+                        </div>
+                        <div class="portfolio-description">
+                            <h5>AI Stock Simulator</h5>
+                            <p>Built a trading simulator using Python and Scikit-learn to predict stock price movements with machine learning.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aiStockModal">
+                                Learn More
+                            </button>
+                            <a href="https://github.com/mthwtsng/ai-trading-simulator" class="btn btn-outline-secondary btn-sm" target="_blank">
+                                GitHub
+                            </a>
                         </div>
                     </div>
-
+                    <!-- Gait Analysis System -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="img/gait_analysis.png" alt="Gait Analysis System" class="img-fluid">
+                        </div>
+                        <div class="portfolio-description">
+                            <h5>Gait Analysis System</h5>
+                            <p>Developed a Python pipeline to analyze 100,000+ accelerometer data points, with visualizations using Seaborn and Matplotlib.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gaitAnalysisModal">
+                                Learn More
+                            </button>
+                            <a href="https://github.com/mthwtsng/Gait-Analysis" class="btn btn-outline-secondary btn-sm" target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
                     <!-- Trading Interface -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Trading Interface</h5>
-                                <p class="card-text">Created a Python-based trading interface for real-time market data retrieval and order execution using Tkinter and IBKR API.</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tradingInterfaceModal">
-                                    Learn More
-                                </button>
-                            </div>
-                            <div class="card-footer">
-                                <a href="https://github.com/mthwtsng/Trading-Interface" class="btn btn-outline-secondary btn-sm" target="_blank">
-                                    GitHub
-                                </a>
-                            </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="img/TradingUI.png" alt="Trading Interface" class="img-fluid">
+                        </div>
+                        <div class="portfolio-description">
+                            <h5>Trading Dashboard</h5>
+                            <p>Built a Python-based trading UI with Tkinter and IBKR API for real-time market data and trade execution.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tradingInterfaceModal">
+                                Learn More
+                            </button>
+                            <a href="https://github.com/mthwtsng/Trading-dashboard" class="btn btn-outline-secondary btn-sm" target="_blank">
+                                GitHub
+                            </a>
                         </div>
                     </div>
-
+                    <!-- Stock Alert Bot -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="img/StockAlertBot.png" alt="Stock Alert Bot" class="img-fluid">
+                        </div>
+                        <div class="portfolio-description">
+                            <h5>Stock Alert Bot</h5>
+                            <p>Created a Discord bot for stock price alerts using Python, Pandas, and MongoDB for real-time notifications.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stockAlertModal">
+                                Learn More
+                            </button>
+                            <a href="https://github.com/mthwtsng/StockAlertBot" class="btn btn-outline-secondary btn-sm" target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Stock Forum Website -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="img/sports-forum-website.jpg" alt="Sports Forum Website" class="img-fluid">
+                        </div>
+                        <div class="portfolio-description">
+                            <h5>Sports Forum Website</h5>
+                            <p>Developed a full-stack web app for stock market discussions using Java, Spring Boot, and React.js.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stockForumModal">
+                                Learn More
+                            </button>
+                            <a href="https://github.com/mthwtsng/sports-forum" class="btn btn-outline-secondary btn-sm" target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
                     <!-- Childhelp Inventory Management -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Childhelp Inventory Management</h5>
-                                <p class="card-text">Collaborated in a team to design an inventory management system using Java, Spring Boot, and PostgreSQL.</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#childhelpModal">
-                                    Learn More
-                                </button>
-                            </div>
-                            <div class="card-footer">
-                                <a href="https://github.com/mthwtsng/Inventory-Management" class="btn btn-outline-secondary btn-sm" target="_blank">
-                                    GitHub
-                                </a>
-                            </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="img/childhelp.png" alt="Childhelp Inventory Management" class="img-fluid">
                         </div>
-                    </div>
-
-                    <!-- Course Planner Web Application -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Course Planner Web Application</h5>
-                                <p class="card-text">Designed a backend using Spring Boot to handle over ten thousand course combinations.</p>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#coursePlannerModal">
-                                    Learn More
-                                </button>
-                            </div>
-                            <div class="card-footer">
-                                <a href="https://github.com/mthwtsng/Course-Planner-Application" class="btn btn-outline-secondary btn-sm" target="_blank">
-                                    GitHub
-                                </a>
-                            </div>
+                        <div class="portfolio-description">
+                            <h5>Childhelp Inventory Management</h5>
+                            <p>Collaborated on a Spring Boot-based inventory system for a nonprofit, improving efficiency by 50%.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#childhelpModal">
+                                Learn More
+                            </button>
+                            <a href="https://github.com/mthwtsng/Inventory-Management" class="btn btn-outline-secondary btn-sm" target="_blank">
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Modals for Each Project -->
-        <div class="modal fade" id="stockAlertModal" tabindex="-1" aria-labelledby="stockAlertModalLabel" aria-hidden="true">
+        <!-- Modals -->
+        <div class="modal fade" id="churchWebsiteModal" tabindex="-1" aria-labelledby="churchWebsiteModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="stockAlertModalLabel">Stock Alert Bot</h5>
+                        <h5 class="modal-title" id="churchWebsiteModalLabel">Church Website - Volunteer Experience</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Developed a Discord bot using Python to manage and notify users of stock price alerts.</p>
+                        <img src="img/churchweb.png" alt="Church Website" class="img-fluid mb-3">
+                        <p>Developed a responsive website for a church to enhance community engagement and communication.</p>
                         <ul>
-                            <li>Integrated MongoDB for scalable and consistent alert storage across multiple channels and servers.</li>
-                            <li>Utilized Pandas for real-time stock price analysis and matching alerts with market data from Yahoo Finance.</li>
+                            <li>Built a user-friendly interface using HTML, CSS, and JavaScript for event listings and sermons.</li>
+                            <li>Implemented responsive design with Bootstrap to ensure accessibility on mobile and desktop devices.</li>
+                            <li>Collaborated with church staff to customize content and improve user experience.</li>
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <a href="https://github.com/mthwtsng/Stock-Alert-Bot" class="btn btn-outline-secondary" target="_blank">GitHub</a>
+                        <a href="https://github.com/mthwtsng/Church-Website" class="btn btn-outline-secondary" target="_blank">GitHub</a>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="modal fade" id="stockForumModal" tabindex="-1" aria-labelledby="stockForumModalLabel" aria-hidden="true">
+        <div class="modal fade" id="aiStockModal" tabindex="-1" aria-labelledby="aiStockModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="stockForumModalLabel">Stock Forum Website</h5>
+                        <h5 class="modal-title" id="aiStockModalLabel">AI Stock Simulator</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Developed a full-stack web application for stock market discussions with user authentication and post interaction.</p>
+                        <img src="img/course-planner.jpg" alt="AI Stock Simulator" class="img-fluid mb-3">
+                        <p>Developed a trading simulation to predict stock price movements using machine learning models.</p>
                         <ul>
-                            <li>Designed RESTful API endpoints with Spring Security for secure user and post management.</li>
-                            <li>Engineered a PostgreSQL database schema to support efficient CRUD operations and scalability.</li>
-                            <li>Integrated React.js front end with Spring Boot back end for smooth communication via CORS configuration.</li>
-                            <li>Created unit and integration tests with JUnit, achieving 90% coverage and reducing production bugs by 30%.</li>
+                            <li>Built models (SVM, Random Forest, Logistic Regression) with Scikit-learn, processing 500+ daily data points.</li>
+                            <li>Created a feature pipeline with technical indicators and lagged returns, using forward-fill preprocessing for NA values.</li>
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <a href="https://github.com/mthwtsng/Stock-Forum-Website" class="btn btn-outline-secondary" target="_blank">GitHub</a>
+                        <a href="https://github.com/mthwtsng/ai-trading-simulator" class="btn btn-outline-secondary" target="_blank">GitHub</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="gaitAnalysisModal" tabindex="-1" aria-labelledby="gaitAnalysisModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gaitAnalysisModalLabel">Gait Analysis System</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/gait_analysis.png" alt="Gait Analysis System" class="img-fluid mb-3">
+                        <p>Built a pipeline to analyze human gait using accelerometer data for biomechanical research.</p>
+                        <ul>
+                            <li>Processed 100,000+ data points with Pandas and SciPy for gait analysis.</li>
+                            <li>Applied Butterworth low and high-pass filters to clean noisy sensor data for accurate step detection.</li>
+                            <li>Enhanced signal processing with SciPy’s optimized numerical routines.</li>
+                            <li>Designed visualizations with Matplotlib and Seaborn, revealing undetected asymmetry patterns.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://github.com/mthwtsng/Gait-Analysis" class="btn btn-outline-secondary" target="_blank">GitHub</a>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -233,15 +279,64 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Developed a user-friendly interface for real-time market data retrieval and order execution for IBKR brokerage.</p>
+                        <img src="img/TradingUI.png" alt="Trading Interface" class="img-fluid mb-3">
+                        <p>Built a Python-based trading interface for real-time market data and trade execution.</p>
                         <ul>
-                            <li>Integrated data pipelines with IB-insync and yfinance APIs for trade execution and data updates.</li>
-                            <li>Implemented 5+ technical indicators using yfinance and Pandas for strategy backtesting and optimization.</li>
-                            <li>Optimized UI components, increasing trader productivity by 25%.</li>
+                            <li>Developed a responsive GUI with Tkinter, using IB-insync and yfinance APIs.</li>
+                            <li>Reduced market data latency with optimized event-driven callbacks.</li>
+                            <li>Implemented non-blocking IBKR API calls using asyncio and ibinsync for concurrent data streams.</li>
                         </ul>
                     </div>
                     <div class="modal-footer">
                         <a href="https://github.com/mthwtsng/Trading-Interface" class="btn btn-outline-secondary" target="_blank">GitHub</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="stockAlertModal" tabindex="-1" aria-labelledby="stockAlertModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="stockAlertModalLabel">Stock Alert Bot</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/StockAlertBot.png" alt="Stock Alert Bot" class="img-fluid mb-3">
+                        <p>Developed a Discord bot using Python to manage and notify users of stock price alerts.</p>
+                        <ul>
+                            <li>Integrated MongoDB for scalable and consistent alert storage across multiple channels and servers.</li>
+                            <li>Utilized Pandas for real-time stock price analysis and matching alerts with market data from Yahoo Finance.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://github.com/mthwtsng/StockAlertBot" class="btn btn-outline-secondary" target="_blank">GitHub</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="sportForumModal" tabindex="-1" aria-labelledby="sportForumModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sportForumModalLabel">Sports Forum Website</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/sports-forum-website.jpg" alt="Sports Forum Website" class="img-fluid mb-3">
+                        <p>Developed a full-stack web application for sports discussions with user authentication and post interaction.</p>
+                        <ul>
+                            <li>Designed RESTful API endpoints with Spring Security for secure user and post management.</li>
+                            <li>Engineered a PostgreSQL database schema to support efficient CRUD operations and scalability.</li>
+                            <li>Integrated React.js front end with Spring Boot back end for smooth communication via CORS configuration.</li>
+                            <li>Created unit and integration tests with JUnit, achieving 90% coverage and reducing production bugs by 30%.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://github.com/mthwtsng/sports-forum" class="btn btn-outline-secondary" target="_blank">GitHub</a>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -256,38 +351,16 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Collaborated in a team of 5 to design an inventory management system, improving tracking efficiency by 50%.</p>
+                        <img src="img/childhelp.png" alt="Childhelp Inventory Management" class="img-fluid mb-3">
+                        <p>Collaborated on a donation inventory system for a nonprofit using Spring Boot and PostgreSQL.</p>
                         <ul>
-                            <li>Built a relational PostgreSQL database, optimizing queries to reduce data retrieval time by 30%.</li>
-                            <li>Developed secure user authentication and role-based access control, adhering to OWASP standards.</li>
-                            <li>Implemented donation trend analytics dashboards, providing actionable insights for stakeholders.</li>
+                            <li>Worked in a 5-person Agile team to build a Spring Boot system.</li>
+                            <li>Implemented secure user login, session handling, and CRUD operations with PostgreSQL.</li>
+                            <li>Developed a responsive frontend with HTML, CSS, and JavaScript.</li>
                         </ul>
                     </div>
                     <div class="modal-footer">
                         <a href="https://github.com/mthwtsng/Inventory-Management" class="btn btn-outline-secondary" target="_blank">GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="coursePlannerModal" tabindex="-1" aria-labelledby="coursePlannerModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="coursePlannerModalLabel">Course Planner Web Application</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Designed a backend using Spring Boot to handle over ten thousand course combinations.</p>
-                        <ul>
-                            <li>Optimized database performance, reducing API response times by 35% through indexing and caching strategies.</li>
-                            <li>Tested REST APIs with Postman, ensuring 100% functionality without critical defects.</li>
-                            <li>Implemented detailed logging and error tracking, enhancing system reliability and maintainability.</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://github.com/mthwtsng/Course-Planner-Application" class="btn btn-outline-secondary" target="_blank">GitHub</a>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

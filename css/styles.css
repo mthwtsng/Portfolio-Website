@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: rgba(18, 18, 18, 0.95);
+    color: #E0E0E0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -19,8 +19,8 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(18, 18, 18, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     padding: 15px 0;
     z-index: 1000;
 }
@@ -28,24 +28,23 @@ header {
 /* Navigation */
 .nav-menu {
     position: fixed;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    z-index: 1000; /* Ensure it's above other content */
-    background-color: rgba(255, 255, 255, 0); /* Add background color */
-    padding: 10px; /* Add padding */
-    border-radius: 10px; /* Add border radius for styling */
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
     margin-top: 30vh;
 }
 
 .nav-menu a {
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
+    color: #E0E0E0;
     font-weight: bold;
-    border: 0px solid transparent;
-    padding: 7px 10px; 
-    display: flex; /* Use flexbox */
-    align-items: center; /* Center items vertically */
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
     margin-left: 5px;
 }
 
@@ -59,90 +58,58 @@ header {
     font-size: 16px;
 }
 
-.nav-menu .menu .nav-item a {
-    text-decoration: none;
-}
-
 .menu a,
 .menu a:focus {
     display: flex;
-    align-items: center; /* Center items vertically */
-    color: #45505b;
-    padding: 20px 25px; /* Adjust padding */
+    align-items: center;
+    color: #E0E0E0;
+    padding: 20px 25px;
     margin-bottom: 8px;
     transition: 0.3s;
     font-size: 15px;
     border-radius: 50px;
-    background: #f2f3f5;
+    background: #6d6d6d;
     height: 10%;
-    width: 42%; /* Adjust width to take full width */
+    width: 42%;
     overflow: hidden;
-
 }
 
 .menu a span,
-.menu a:focus span { 
+.menu a:focus span {
     padding: 2px 5px 0 7px;
-    color: #45505b;
-    text-decoration: none;
+    color: #E0E0E0;
 }
 
 .menu a:hover,
 .menu .active,
 .menu .active:focus,
-.menu li:hover>a {
-    color: #fff;
-    background: #646c72;
+.menu li:hover > a {
+    color: #FFF;
+    background: #333;
 }
 
 .menu a:hover span,
 .menu .active span,
 .menu .active:focus span,
-.menu li:hover>a span {
-    color: #fff;
+.menu li:hover > a span {
+    color: #FFF;
     visibility: visible;
 }
 
-.nav-item:nth-child(1) a:hover,
-.nav-item:nth-child(1):hover>a {
-    width: 70%;
-    color: #fff;
+.nav-item:nth-child(1):hover > a,
+.nav-item:nth-child(2):hover > a,
+.nav-item:nth-child(3):hover > a,
+.nav-item:nth-child(4):hover > a,
+.nav-item:nth-child(5):hover > a {
+    width: 90%;
+    color: #FFF;
 }
 
-.nav-item:nth-child(2) a:hover,
-.nav-item:nth-child(2):hover>a {
-    width: 70%; 
-    color: #fff;
-}
-
-.nav-item:nth-child(3) a:hover,
-.nav-item:nth-child(3):hover>a {
-    width: 90%; 
-    color: #fff;
-}
-
-.nav-item:nth-child(4) a:hover,
-.nav-item:nth-child(4):hover>a {
-    width: 85%; 
-    color: #fff;
-}
-
-.nav-item:nth-child(5) a:hover,
-.nav-item:nth-child(5):hover>a {
-    width: 85%; 
-    color: #fff;
-}
-
-.menu a:hover span,
-.menu li:hover>a span {
-    display: block;
-}
-
+/* Hide span initially */
 .menu a span,
 .menu a:focus span {
-    visibility: hidden; 
+    visibility: hidden;
 }
-
 
 /* Home Section */
 #home {
@@ -153,22 +120,23 @@ header {
     text-align: center;
     min-height: 100vh;
     padding: 80px 20px;
+    background-color: #121212;
 }
 
 #home-mainheader {
     font-size: 50px;
     font-weight: bold;
-    color: #222;
+    color: #FFFFFF;
 }
 
 #home-subheader {
     font-size: 20px;
-    color: #555;
+    color: #CCCCCC;
     margin-top: 10px;
 }
 
 #dynamic-text {
-    color: #007bff;
+    color: #00AAFF;
     font-weight: bold;
     transition: opacity 0.5s ease;
 }
@@ -179,13 +147,22 @@ header {
     margin-top: 20px;
 }
 
+.social-icons a {
+    color: #E0E0E0;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00AAFF;
+}
+
 /* Section Styling */
 section {
     padding: 80px 10%;
-    background: #fff;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #1E1E1E;
+    margin-bottom: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .section-title {
@@ -196,25 +173,95 @@ section {
 .section-title h2 {
     font-size: 32px;
     font-weight: bold;
-    color: #007bff;
+    color: #00AAFF;
+}
+
+#about {
+    color: #F0F0F0;
 }
 
 /* Portfolio Section */
-#portfolio .card {
-    border: none;
+#portfolio .portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#portfolio .portfolio-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #2A2A2A;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
-#portfolio .card:hover {
-    transform: scale(1.05);
+#portfolio .portfolio-item:hover {
+    transform: scale(1.02);
+}
+
+#portfolio .portfolio-image {
+    flex: 0 0 40%;
+    max-width: 300px;
+}
+
+#portfolio .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+#portfolio .portfolio-description {
+    flex: 1;
+    padding: 20px;
+    color: #E0E0E0;
+}
+
+#portfolio .portfolio-description h5 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+#portfolio .portfolio-description p {
+    font-size: 16px;
+    color: #CCCCCC;
+    margin-bottom: 20px;
+}
+
+#portfolio .portfolio-description .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #portfolio .portfolio-item {
+        flex-direction: column;
+    }
+
+    #portfolio .portfolio-image {
+        max-width: 100%;
+        height: 200px;
+    }
+
+    #portfolio .portfolio-image img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #portfolio .portfolio-description {
+        padding: 15px;
+    }
 }
 
 /* Resume Section */
 .resume-download {
     text-align: center;
     margin-bottom: 20px;
+    color: #E0E0E0;
 }
 
 .resume-preview {
@@ -226,4 +273,5 @@ section {
     width: 100%;
     height: 80vh;
     border: none;
+    background-color: #1E1E1E;
 }

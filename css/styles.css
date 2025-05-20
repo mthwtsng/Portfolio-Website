@@ -275,3 +275,16 @@ section {
     border: none;
     background-color: #1E1E1E;
 }
+
+/* Contact Section */
+.contact-text{
+    text-align: center;
+    color: #E0E0E0;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;  
+  gap: 1rem;                
+  margin-top: 1rem;         
+}

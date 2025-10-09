@@ -1,4 +1,5 @@
-/** Initializes all components when DOM is fully loaded */
+import projects from './projects.js';
+
 document.addEventListener('DOMContentLoaded', function() {
     initNavbar();
     initScrollAnimations();
@@ -12,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo(0, 0);
 });
 
-/** Controls navbar appearance and behavior on scroll */
 function initNavbar() {
     const navbar = document.querySelector('.navbar');
     
@@ -29,7 +29,6 @@ function initNavbar() {
     window.addEventListener('scroll', setActiveNavLink);
 }
 
-/** Updates active navigation link based on current scroll position */
 function setActiveNavLink() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -53,7 +52,7 @@ function setActiveNavLink() {
     });
 }
 
-/** Enables smooth scrolling behavior for anchor links */
+
 function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -80,7 +79,6 @@ function initSmoothScrolling() {
     });
 }
 
-/** Initializes fade-in animations for page elements */
 function initScrollAnimations() {
     const fadeElements = document.querySelectorAll('.fade-in');
     
@@ -104,7 +102,6 @@ function initScrollAnimations() {
     });
 }
 
-/** Sets up dynamic text animation for the home subtitle */
 function initDynamicText() {
     const dynamicText = document.querySelector('.home-subtitle');
     const professions = ['Full-Stack Developer', 'Software Engineer', 'Problem Solver', 'Tech Enthusiast'];
@@ -113,8 +110,6 @@ function initDynamicText() {
     dynamicText.innerHTML = `<span class="typewriter">Computer Science Student & Developer</span>`;
 
     let typewriterElement = document.querySelector('.typewriter');
-
-    /** Types text character by character */
     function typeWriter(text, i, callback) {
         if (i < text.length) {
             typewriterElement.innerHTML = text.substring(0, i+1) + '<span class="typing-cursor">|</span>';
@@ -126,7 +121,6 @@ function initDynamicText() {
         }
     }
 
-    /** Starts the text animation cycle */
     function startTextAnimation(i) {
         if (i < professions.length) {
             typeWriter(professions[i], 0, function() {
@@ -135,11 +129,10 @@ function initDynamicText() {
                         startTextAnimation((i + 1) % professions.length);
                     });
                 }, 2000);
+                
             });
         }
     }
-
-    /** Deletes text character by character */
     function deleteText(i, callback) {
         if (i >= 0) {
             typewriterElement.innerHTML = professions[index].substring(0, i) + '<span class="typing-cursor">|</span>';
@@ -157,7 +150,6 @@ function initDynamicText() {
     }, 2000);
 }
 
-/** Adds typing cursor animation styles */
 const style = document.createElement('style');
 style.textContent = `
     .typing-cursor {
@@ -177,7 +169,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-/** Handles contact form submission and validation */
 function handleContactForm() {
     const contactForm = document.getElementById('contact-form');
     
@@ -201,23 +192,32 @@ function handleContactForm() {
     }
 }
 
-/** Initializes modal animations */
+
+function renderProjects() {
+  const projectsContainer = document.querySelector('#portfolio .row');
+  projectsContainer.innerHTML = projects.map(project => `
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="project-card">
+        <div class="project-content">
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <div class="project-tech">
+            ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
+          </div>
+          <div class="project-links">
+            <a href="${project.githubUrl}" class="btn btn-outline-light" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    const modals = document.querySelectorAll('.modal');
-    
-    modals.forEach(modal => {
-        modal.addEventListener('show.bs.modal', function() {
-            const modalContent = this.querySelector('.modal-content');
-            modalContent.style.transform = 'translateY(-50px)';
-            modalContent.style.opacity = '0';
-            
-            setTimeout(() => {
-                modalContent.style.transition = 'all 0.3s ease';
-                modalContent.style.transform = 'translateY(0)';
-                modalContent.style.opacity = '1';
-            }, 10);
-        });
-    });
+    renderProjects();
 });
 
 console.log(`
